@@ -1,38 +1,21 @@
-import {
-  Box,
-  Button,
-  FormControl,
-  Image,
-  Input,
-  Link,
-  Text,
-  VStack,
-} from "native-base";
+import { Box, FormControl, Image, Link, Text, VStack } from "native-base";
 import Logo from "./assets/Logo.png";
 import { TouchableOpacity } from "react-native";
 import { Titulo } from "./components/Titulo";
+import { EntradaTexto } from "./components/EntradaTexto";
+import { Botao } from "./components/Botao";
 
-export default function Login() {
+export default function Cadastro() {
   return (
     <VStack flex={1} alignItems="center" justifyContent="center" p={5}>
       <Image source={Logo} alt="Logo Voll" />
-      <Titulo>Faça login em sua conta</Titulo>
+      <Titulo>Cadastro</Titulo>
       <Box>
         <FormControl mt={3}>
-          <FormControl.Label>E-mail</FormControl.Label>
-          <Input
-            placeholder="Insira seu e-mail"
-            size="lg"
-            w="100%"
-            borderRadius="lg"
-            bgColor="gray.100"
-            shadow={3}
-          />
+          <EntradaTexto label="E-mail" placeholder="Insira seu e-mail" />
         </FormControl>
       </Box>
-      <Button w="100%" bg="blue.800" mt={10} borderRadius="lg">
-        Entrar
-      </Button>
+      <Botao mt={10}>Entrar</Botao>
       <Link href="https://alura.com.br" mt={2}>
         Esqueceu sua senha?
       </Link>
