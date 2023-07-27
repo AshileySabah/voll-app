@@ -1,9 +1,9 @@
 import { Box, FormControl, Image, Link, Text, VStack } from "native-base";
-import Logo from "./assets/Logo.png";
+import Logo from "../assets/Logo.png";
 import { TouchableOpacity } from "react-native";
-import { Titulo } from "./components/Titulo";
-import { EntradaTexto } from "./components/EntradaTexto";
-import { Botao } from "./components/Botao";
+import { Titulo } from "../components/Titulo";
+import { EntradaTexto } from "../components/EntradaTexto";
+import { Botao } from "../components/Botao";
 
 export default function Login() {
   return (
