@@ -1,6 +1,6 @@
 import { NativeBaseProvider, ScrollView, StatusBar } from "native-base";
 import { TEMAS } from "./src/estilos/temas";
-import Cadastro from "./src/Cadastro";
+import Cadastro from "./src/screens/Cadastro";
 
 export default function App() {
   return (

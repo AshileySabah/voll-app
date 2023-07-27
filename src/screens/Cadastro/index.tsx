@@ -1,8 +1,8 @@
 import { Box, Checkbox, FormControl, Image, Text, VStack } from "native-base";
-import Logo from "../assets/Logo.png";
-import { Titulo } from "../components/Titulo";
-import { EntradaTexto } from "../components/EntradaTexto";
-import { Botao } from "../components/Botao";
+import Logo from "../../assets/Logo.png";
+import { Titulo } from "../../components/Titulo";
+import { EntradaTexto } from "../../components/EntradaTexto";
+import { Botao } from "../../components/Botao";
 import { useState, useCallback } from "react";
 import { secoes } from "./provider";
 
