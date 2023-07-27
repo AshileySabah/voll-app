@@ -7,7 +7,12 @@ interface IBotaoProps extends IButtonProps {
 
 export function Botao({ children, ...rest }: IBotaoProps) {
   return (
-    <Button w="100%" bg="blue.800" borderRadius="lg" {...rest}>
+    <Button
+      w="100%"
+      bgColor={rest?.bgColor || rest?.backgroundColor || "blue.800"}
+      borderRadius="lg"
+      {...rest}
+    >
       {children}
     </Button>
   );

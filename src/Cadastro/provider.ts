@@ -1,22 +1,24 @@
-import { Box, FormControl, Image, Link, Text, VStack } from "native-base";
-import Logo from "./assets/Logo.png";
-import { Titulo } from "./components/Titulo";
-import { EntradaTexto } from "./components/EntradaTexto";
-import { Botao } from "./components/Botao";
-
 interface IEntradaTexto {
   id: number;
   label: string;
   placeholder: string;
   type?: "password" | "text";
 }
+
+interface ICheckBox {
+  id: number;
+  value: string;
+}
+
 interface ISecao {
   id: number;
   titulo: string;
-  entradaTexto: IEntradaTexto[];
+  subtitulo?: string;
+  entradaTexto?: IEntradaTexto[];
+  checkbox?: ICheckBox[];
 }
 
-const secoes: ISecao[] = [
+export const secoes: ISecao[] = [
   {
     id: 1,
     titulo: "Insira alguns dados básicos:",
@@ -76,32 +78,19 @@ const secoes: ISecao[] = [
       },
     ],
   },
+  {
+    id: 3,
+    titulo: "Para finalizar, qual é o seu plano de saúde?",
+    subtitulo: "Selecione os planos:",
+    checkbox: [
+      { id: 1, value: "Sulamérica" },
+      { id: 1, value: "Unimed" },
+      { id: 1, value: "Bradesco" },
+      { id: 1, value: "Amil" },
+      { id: 1, value: "Biosaúde" },
+      { id: 1, value: "Biovida" },
+      { id: 1, value: "Outros" },
+      { id: 1, value: "Não tenho plano" },
+    ],
+  },
 ];
-
-export default function Cadastro() {
-  return (
-    <VStack flex={1} alignItems="center" justifyContent="center" p={5}>
-      <Image source={Logo} alt="Logo Voll" />
-      {secoes?.map(({ id, titulo, entradaTexto }) => {
-        return (
-          <Box w="100%" key={id}>
-            <Titulo>{titulo}</Titulo>
-            <Box>
-              <FormControl mt={3}>
-                {entradaTexto?.map(({ id, label, placeholder, type }) => {
-                  return (
-                    <EntradaTexto
-                      key={id}
-                      {...{ label, placeholder, type: type || "text" }}
-                    />
-                  );
-                })}
-              </FormControl>
-            </Box>
-            <Botao mt={10}>Avançar</Botao>
-          </Box>
-        );
-      })}
-    </VStack>
-  );
-}
