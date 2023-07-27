@@ -5,16 +5,22 @@ import { Titulo } from "./components/Titulo";
 import { EntradaTexto } from "./components/EntradaTexto";
 import { Botao } from "./components/Botao";
 
-export default function Login() {
+export default function Cadastro() {
   return (
     <VStack flex={1} alignItems="center" justifyContent="center" p={5}>
       <Image source={Logo} alt="Logo Voll" />
-      <Titulo>Faça login em sua conta</Titulo>
+      <Titulo>Cadastro</Titulo>
       <Box>
         <FormControl mt={3}>
+          <EntradaTexto label="Nome" placeholder="Insira seu nome completo" />
           <EntradaTexto label="E-mail" placeholder="Insira seu e-mail" />
           <EntradaTexto
-            label="Senha"
+            label="Crie uma senha"
+            placeholder="Insira sua senha"
+            type="password"
+          />
+          <EntradaTexto
+            label="Repita a senha"
             placeholder="Insira sua senha"
             type="password"
           />

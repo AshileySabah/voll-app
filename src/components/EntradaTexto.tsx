@@ -7,7 +7,7 @@ interface IEntradaTextoProps extends IInputProps {
 export function EntradaTexto({ label, ...rest }: IEntradaTextoProps) {
   return (
     <>
-      {label && <FormControl.Label>E-mail</FormControl.Label>}
+      {label && <FormControl.Label>{label}</FormControl.Label>}
       <Input
         size="lg"
         w="100%"
