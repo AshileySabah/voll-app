@@ -20,7 +20,9 @@ export default function Login({ navigation }) {
           />
         </FormControl>
       </Box>
-      <Botao mt={10}>Entrar</Botao>
+      <Botao mt={10} onPress={() => navigation?.navigate("Tabs")}>
+        Entrar
+      </Botao>
       <Link href="https://alura.com.br" mt={2}>
         Esqueceu sua senha?
       </Link>
