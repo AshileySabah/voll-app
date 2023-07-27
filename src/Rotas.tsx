@@ -9,8 +9,16 @@ export default function Rotas() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Login" component={Login} />
-        <Tab.Screen name="Cadastro" component={Cadastro} />
+        <Tab.Screen
+          name="Login"
+          component={Login}
+          options={{ headerShown: false, animation: "fade" }}
+        />
+        <Tab.Screen
+          name="Cadastro"
+          component={Cadastro}
+          options={{ headerShown: false, animation: "fade" }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );
